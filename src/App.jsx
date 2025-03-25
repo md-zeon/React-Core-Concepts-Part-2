@@ -7,6 +7,9 @@ import Users from "./Users";
 import Friends from "./Friends";
 import Posts from "./Posts";
 import Players from "./Players";
+import Task1 from "./Tasks/Task1";
+import Task2 from "./Tasks/Task2";
+import Task3 from "./Tasks/Task3";
 
 // const fetchUsers = fetch("https://jsonplaceholder.typicode.com/users").then((res) => res.json());
 
@@ -15,32 +18,38 @@ import Players from "./Players";
 // 	return res.json();
 // }
 
-const fetchPosts = async () => {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-	return res.json();
-}
+// const fetchPosts = async () => {
+// 	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// 	return res.json();
+// }
 
 function App() {
 	// const friendsPromise = fetchFriends();
 
-	const postsPromise = fetchPosts();
+	// const postsPromise = fetchPosts();
 
-	function handleClick() {
-		alert("Button is Clicked!");
-	}
+	// function handleClick() {
+	// 	alert("Button is Clicked!");
+	// }
 
-	const handleClick3 = () => {
-		alert("Clicked Button 3");
-	};
+	// const handleClick3 = () => {
+	// 	alert("Clicked Button 3");
+	// };
 
-	const handleAdd5 = (num) => {
-		const newNum = num + 5;
-		alert(newNum);
-	};
+	// const handleAdd5 = (num) => {
+	// 	const newNum = num + 5;
+	// 	alert(newNum);
+	// };
 
 	return (
 		<>
 			<h1>React Core Concepts Part 2</h1>
+			{/* Practice Tasks */}
+			<Task1></Task1>
+			<Task2></Task2>
+			<Task3></Task3>
+
+			{/* Module Codes */}
 			{/* <Players></Players> */}
 
 			{/* <Suspense fallback={<h3>Loading...</h3>}>
@@ -50,16 +59,16 @@ function App() {
 				<Friends friendsPromise={friendsPromise}></Friends>
 			</Suspense> */}
 
-			<Suspense fallback={<h2>Posts are Coming...</h2>}>
+			{/* <Suspense fallback={<h2>Posts are Coming...</h2>}>
 				<Posts postsPromise={postsPromise}></Posts>
-			</Suspense>
+			</Suspense> */}
 
-			<Baller></Baller>
+			{/* <Baller></Baller>
 			<Batsman></Batsman>
-			<Counter></Counter>
+			<Counter></Counter> */}
 
 			{/* <button onclick="handleClick()">CLick Me</button> */}
-			<button onClick={handleClick}>Click Me</button>
+			{/* <button onClick={handleClick}>Click Me</button>
 			<button
 				onClick={function handleClick2() {
 					alert("Clicked Button 2");
@@ -68,7 +77,7 @@ function App() {
 			</button>
 			<button onClick={handleClick3}>Click Me 3</button>
 			<button onClick={() => alert("Clicked Button 4")}>Click Me 4</button>
-			<button onClick={() => handleAdd5(10)}>Click Add 5</button>
+			<button onClick={() => handleAdd5(10)}>Click Add 5</button> */}
 		</>
 	);
 }
